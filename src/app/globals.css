@@ -1,0 +1,115 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* syncfusion */
+
+@layer utilities {
+  .center {
+    @apply flex justify-center items-center;
+  }
+
+  .test {
+    @apply bg-red-500;
+  }
+}
+
+@layer base {
+  /* THEME - Default Colors (Dark Mode) */
+  :root {
+    --background: 222 47% 11%;
+    --foreground: 210 40% 98%;
+    --card: 222 47% 13%;
+    --card-foreground: 210 40% 98%;
+    --popover: 222 47% 9%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 189 70% 65%;
+    --primary-foreground: 222 47% 11%;
+    --secondary: 217 33% 25%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 217 33% 20%;
+    --muted-foreground: 215 20% 75%;
+    --accent: 217 33% 25%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 63% 60%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 217 33% 25%;
+    --input: 217 33% 30%;
+    --ring: 189 70% 65%;
+    --radius: 0.5rem;
+    --sidebar-background: 222 47% 13%;
+    --sidebar-foreground: 210 40% 98%;
+    --sidebar-primary: 189 70% 65%;
+    --sidebar-primary-foreground: 222 47% 11%;
+    --sidebar-accent: 217 33% 25%;
+    --sidebar-accent-foreground: 210 40% 98%;
+    --sidebar-border: 217 33% 25%;
+    --sidebar-ring: 189 70% 65%;
+  }
+
+  /* THEME - Light Colors (for light mode toggle) */
+  .light {
+    --background: 210 40% 98%;
+    --foreground: 222 47% 11%;
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 11%;
+    --popover: 210 40% 98%;
+    --popover-foreground: 222 47% 11%;
+    --primary: 189 70% 40%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 217 33% 90%;
+    --secondary-foreground: 222 47% 11%;
+    --muted: 217 33% 95%;
+    --muted-foreground: 215 20% 45%;
+    --accent: 217 33% 90%;
+    --accent-foreground: 222 47% 11%;
+    --destructive: 0 63% 50%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 217 33% 80%;
+    --input: 217 33% 80%;
+    --ring: 189 70% 40%;
+    --radius: 0.5rem;
+    --sidebar-background: 210 40% 98%;
+    --sidebar-foreground: 222 47% 11%;
+    --sidebar-primary: 189 70% 40%;
+    --sidebar-primary-foreground: 210 40% 98%;
+    --sidebar-accent: 217 33% 90%;
+    --sidebar-accent-foreground: 222 47% 11%;
+    --sidebar-border: 217 33% 80%;
+    --sidebar-ring: 189 70% 40%;
+  }
+
+  /* THEME - Custom Colors */
+  /* :root {} */
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+body {
+  color: rgb(var(--foreground));
+  font-family: Roboto, Arial, Helvetica, sans-serif;
+}
+
+.opacityHover:hover {
+  @apply opacity-90 transition-opacity duration-200;
+}
+
+/* @media (min-width: 1536px) {
+  .container {
+    max-width: 1280px;
+  }
+} */
+
+.fallback-helper {
+  display: none;
+}
+.fallback-if-empty .fallback-helper:only-child {
+  display: block;
+}
